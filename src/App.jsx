@@ -1,13 +1,16 @@
-import { useState } from 'react'
+import { BrowserRouter, Route,Routes } from 'react-router-dom'
 import './App.scss'
+import Login from './components/Login'
 
-function App() {
-
-  return (
-    <>
-      <h1>Hello World kavita</h1>
-    </>
+const App = ()=>{
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Login/>}></Route>
+        {/* <Route path="/Login" element={<Login/>}></Route> */}
+        {/* <Route path='/Signup' element={<Signup/>}></Route> */}
+      </Routes>
+    </BrowserRouter>
   )
 }
-
-export default App
+export default App;
